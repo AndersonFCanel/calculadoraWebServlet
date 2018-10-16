@@ -1,25 +1,28 @@
 $(document).ready(function() {
 	console.log('Ready disparado');
-
+	//$('#operando1').keyup(function() {
 	$('#operando1').focusout(function() {
 		var valor = document.getElementById("operando1").value;
 		var re = new RegExp('^-\d*\.?\d+$');
-		
-		if ((re.exec(valor))||($.isNumeric(valor))){
-			
+		//if(isNaN(valor)){
+		if ((re.exec(valor))||($.isNumeric(valor))){	
 		} else {
 			alert("Não permitida letras ou caracteres especiais, somente números!")
-			$(this).val(this.value.replace(/[^\d]+/g, ''));
+			$('#operando1').val("");
+			//$(this).val(this.value.replace(/[^\d]+/g, ''));
 		}
 	});
 	
-	$('#operando2').keyup(function() {
-		var valor = document.getElementById("operando2").value;
-		if(isNaN(valor)){
-			alert("Os campos devem conter apenas numeros");
-		}
-		else{
-			//document.getElementById("valorFinal").innerHTML = subtracao;			
+	//$('#operando2').keyup(function() {
+	$('#operando2').focusout(function() {	
+	var valor = document.getElementById("operando2").value;
+		var re = new RegExp('^-\d*\.?\d+$');
+		//if(isNaN(valor)){
+		if ((re.exec(valor))||($.isNumeric(valor))){	
+		} else {
+			alert("Não permitida letras ou caracteres especiais, somente números!")
+			$('#operando').val("");
+			//$(this).val(this.value.replace(/[^\d]+/g, ''));
 		}
 	});
 

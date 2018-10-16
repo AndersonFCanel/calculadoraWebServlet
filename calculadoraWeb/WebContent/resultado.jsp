@@ -4,11 +4,12 @@
 <html>
 <head>
 
-<!-- BOOTSTRAP -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Inclusão do bootstrap via link local -->
+<link rel="stylesheet" href="css/bootstrap-4.1.3/css/bootstrap.min.css">
+<script "src/com/suam/trabalho"src="css/bootstrap-4.1.3/js/bootstrap.min.js">
+	
+</script>
+
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
