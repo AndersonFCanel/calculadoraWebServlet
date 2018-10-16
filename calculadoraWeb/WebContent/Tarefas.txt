@@ -1,0 +1,19 @@
+a) Crie um projeto web dinâmico chamado CalculadoraWeb.
+b) Crie uma classe java chamada Calculadora na pasta com.suam. Essa classe deverá implementar as
+operações de soma, subtração, multiplicação e divisão na forma de métodos de objeto onde são
+passados dois parâmetros float de entrada e será retornado um parâmetro float de saída. Exemplo:
+6
+public class Operacao {
+public int soma(float x, float y){
+return (x+y);
+}
+...
+}
+================================================
+c) Crie um html chamado calculadora.html com os campos abaixo.
+
+=======================================================
+d) Implemente um servlet chamado CalculadoraServlet, esse servlet deverá recuperar os parâmetros
+passados pelo formulario.html. Em seguida o servlet deverá verificar qual a operação da classe
+Calculadora deverá chamar, em seguida, deverá despachar para o resultado.jsp um atributo com o
+resultado dessa operação.
