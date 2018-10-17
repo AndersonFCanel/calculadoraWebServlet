@@ -6,7 +6,8 @@
 
 <!-- Inclusão do bootstrap via link local -->
 <link rel="stylesheet" href="css/bootstrap-4.1.3/css/bootstrap.min.css">
-<script "src/com/suam/trabalho"src="css/bootstrap-4.1.3/js/bootstrap.min.js">
+<script
+	"src/com/suam/trabalho"src="css/bootstrap-4.1.3/js/bootstrap.min.js">
 	
 </script>
 
@@ -24,8 +25,10 @@
 	</div>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Resultado</h1>
-			<h2><%=request.getAttribute("resultado")%></h2>
+			<div class="resultado">
+				<h1>Resultado</h1>
+				<h2><%=request.getAttribute("resultado")%></h2>
+			</div>
 		</div>
 	</div>
 

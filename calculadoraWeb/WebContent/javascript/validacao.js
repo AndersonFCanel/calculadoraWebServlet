@@ -9,6 +9,7 @@ $(document).ready(function() {
 		} else {
 			alert("Não permitida letras ou caracteres especiais, somente números!")
 			$('#operando1').val("");
+			//document.getElementById("operando1").focus();
 			//$(this).val(this.value.replace(/[^\d]+/g, ''));
 		}
 	});
@@ -22,6 +23,7 @@ $(document).ready(function() {
 		} else {
 			alert("Não permitida letras ou caracteres especiais, somente números!")
 			$('#operando').val("");
+			//document.getElementById("operando2").focus();
 			//$(this).val(this.value.replace(/[^\d]+/g, ''));
 		}
 	});
