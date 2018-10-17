@@ -5,7 +5,7 @@ $(document).ready(function() {
 		var valor = document.getElementById("operando1").value;
 		var re = new RegExp('^-\d*\.?\d+$');
 		//if(isNaN(valor)){
-		if ((re.exec(valor))||($.isNumeric(valor))){	
+		if ((re.exec(valor))||($.isNumeric(valor))||valor!=""){	
 		} else {
 			alert("Não permitida letras ou caracteres especiais, somente números!")
 			$('#operando1').val("");
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		if ((re.exec(valor))||($.isNumeric(valor))){	
 		} else {
 			alert("Não permitida letras ou caracteres especiais, somente números!")
-			$('#operando').val("");
+			$('#operando2').val("");
 			//document.getElementById("operando2").focus();
 			//$(this).val(this.value.replace(/[^\d]+/g, ''));
 		}

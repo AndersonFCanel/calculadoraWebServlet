@@ -17,19 +17,30 @@
 <title>Resultado</title>
 </head>
 <body>
-
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h1>Calculadora Web</h1>
-		</div>
-	</div>
-	<div class="container">
-		<div class="jumbotron">
-			<div class="resultado">
-				<h1>Resultado</h1>
-				<h2><%=request.getAttribute("resultado")%></h2>
+	<div class="row content" id="conteudo">
+		<div class="col-md-3 "></div>
+		<div class="col-md-5 ">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1 id="resultado">Calculadora Web - Resultado</h1>
+				</div>
 			</div>
 		</div>
+		<div class="col-md-3 "></div>
+	</div>
+
+
+	<div class="row content" id="conteudo">
+		<div class="col-md-3 "></div>
+		<div class="col-md-5 ">
+			<div class="container">
+				<div class="jumbotron"> 
+					<h1 id="resultado"><%=request.getAttribute("resultado")%></h1>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-4 "></div>
 	</div>
 
 	<a href="/calculadoraWeb/calculadora.html" class="brand-logo center">Calculadora
