@@ -1,33 +1,19 @@
 $(document).ready(function() {
 	console.log('Ready disparado');
-	//$('#operando1').keyup(function() {
-	$('#operando1').focusout(function() {
+	//$('#operando1').keyup(function() {}//Quando digita
+	//if(isNaN(valor)){}//se não for número
+	//document.getElementById("operando1").focus();// trazer o foco para o componente
+	//$(this).val(this.value.replace(/[^\d]+/g, ''));//executar replace no this da função
+	
+	/*$('#operando1').focusout(function() {
 		var valor = document.getElementById("operando1").value;
 		var re = new RegExp('^-\d*\.?\d+$');
-		//if(isNaN(valor)){
 		if ((re.exec(valor))||($.isNumeric(valor))||valor!=""){	
 		} else {
 			alert("Não permitida letras ou caracteres especiais, somente números!")
 			$('#operando1').val("");
-			//document.getElementById("operando1").focus();
-			//$(this).val(this.value.replace(/[^\d]+/g, ''));
 		}
-	});
-	
-	//$('#operando2').keyup(function() {
-	$('#operando2').focusout(function() {	
-	var valor = document.getElementById("operando2").value;
-		var re = new RegExp('^-\d*\.?\d+$');
-		//if(isNaN(valor)){
-		if ((re.exec(valor))||($.isNumeric(valor))){	
-		} else {
-			alert("Não permitida letras ou caracteres especiais, somente números!")
-			$('#operando2').val("");
-			//document.getElementById("operando2").focus();
-			//$(this).val(this.value.replace(/[^\d]+/g, ''));
-		}
-	});
-
+	});*/
 
 	$("#form").validate({
 		rules : {
@@ -47,16 +33,41 @@ $(document).ready(function() {
 			}
 		},
 		submitHandler : function(form) {
-			
+
+			//checando a definição de uma operação matemática para ser executada!
 			var value = document.getElementById("operacao");
+			
+			var op1 = document.getElementById("operando1").value;
+			var op2 = document.getElementById("operando2").value;
+			var re = new RegExp('^-\d*\.?\d+$');
+			
 	        if (value.options[value.selectedIndex].value == "" ){
 	                alert("Selecione uma operação antes de enviar!");
-	                return false;
-	        }else {
+	              return false;            
+	        }else if (!((re.exec(op1))||($.isNumeric(op1)))) {
+	        	alert("Não permitida letras ou caracteres especiais, somente números!")
+				$('#operando1').val("");
+	        	
+	        	if (!((re.exec(op2))||($.isNumeric(op2)))) {
+					$('#operando2').val("");
+	        	}
+	        	
+				return false;
 			
+	        }else if (!((re.exec(op2))||($.isNumeric(op2)))) {
+				alert("Não permitida letras ou caracteres especiais, somente números!")
+				$('#operando2').val("");
+				
+				if (!((re.exec(op1))||($.isNumeric(op1)))) {
+					$('#operando1').val("");
+					}
+				
+				return false;
+				
+			}else{
 				return true;
 			}
-	
+
 		}
 	});
 });
