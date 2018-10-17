@@ -11,6 +11,8 @@
 	
 </script>
 
+<!-- Inclusão da folha de estilo-->
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
