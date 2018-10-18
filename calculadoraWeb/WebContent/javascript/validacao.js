@@ -33,10 +33,8 @@ $(document).ready(function() {
 			}
 		},
 		submitHandler : function(form) {
-
-			//checando a definição de uma operação matemática para ser executada!
-			var value = document.getElementById("operacao");
 			
+			var value = document.getElementById("operacao");
 			var op1 = document.getElementById("operando1").value;
 			var op2 = document.getElementById("operando2").value;
 			var re = new RegExp('^-\d*\.?\d+$');
