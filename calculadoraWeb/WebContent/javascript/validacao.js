@@ -43,7 +43,7 @@ $(document).ready(function() {
 	                alert("Selecione uma operação antes de enviar!");
 	              return false;            
 	        }else if (!((re.exec(op1))||($.isNumeric(op1)))) {
-	        	alert("Não permitida letras ou caracteres especiais, somente números!")
+	        	alert("Não permitido letras ou caracteres especiais, somente números!")
 				$('#operando1').val("");
 	        	
 	        	if (!((re.exec(op2))||($.isNumeric(op2)))) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
 				return false;
 			
 	        }else if (!((re.exec(op2))||($.isNumeric(op2)))) {
-				alert("Não permitida letras ou caracteres especiais, somente números!")
+				alert("Não permitido letras ou caracteres especiais, somente números!")
 				$('#operando2').val("");
 				
 				if (!((re.exec(op1))||($.isNumeric(op1)))) {
